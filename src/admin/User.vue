@@ -94,14 +94,10 @@ computed: {
     },
       mounted () {
         //this.getAll();
-        console.log('mount')
+        
     },
     beforeUpdate () {
-        if(this.message){this.getAll();
-        console.log('update true')
-        }
-
-        console.log('update false')
+        
     },
     methods: {
         ...mapActions('users', ['update']),

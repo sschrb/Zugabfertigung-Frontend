@@ -21,26 +21,6 @@ export default {
     data () {
         return {
 
-             submitted: false,
-            evu_def: {
-                name: "",
-                short: '',
-                code: '',
-
-
-
-            },
-
-            evu: {
-                name: "",
-                short: '',
-                code: '',
-
-
-
-            },
-
-
         }
     },
 computed: {
@@ -63,11 +43,7 @@ computed: {
         console.log('mount')
     },
     beforeUpdate () {
-        if(this.message){this.getAll();
-        console.log('update true')
-        }
-
-        console.log('update false')
+        
     },
     methods: {
         ...mapActions('users', ['getAll']),
@@ -86,51 +62,7 @@ computed: {
                 }
             )
         },
-        anlegen(){
-
- this.submitted = true;
-            this.$validator.validate().then(valid => {
-                if (valid) {
-                    this.create(this.evu)
-                    this.evu_def= {
-                name: "",
-                short: '',
-                code: '',
-
-
-
-            },
-
-            this.evu= {
-                name: "",
-                short: '',
-                code: '',
-
-
-
-            }
-             this.submitted = false;
-                }
-            });
-
-        },
-        updaten(){
-
- this.submitted = true;
-            this.$validator.validate().then(valid => {
-                if (valid) {
-                    this.update(this.evu)
-                }
-            });
-        },
-
-        loeschen(){
-this.delete(this.evu.id).then(() => {this.evu = this.evu_def})
-        },
-        clearNachricht(){
-            this.$store.state.evu.nachricht = {};
-            console.log('clear')
-        }
+        
 
 
 

@@ -3,14 +3,14 @@ import Router from 'vue-router';
 
 import { Role } from './Role';
 
-import LadelisteAnlegen from '../ladeliste/LadelisteAnlegen'
+
 import HomePage from '../home/HomePage'
 import LoginPage from '../login/LoginPage'
 import RegisterPage from '../register/RegisterPage'
 import HistoryPage from '../history/HistoryPage'
-import ViewPage from '../view/ViewPage'
+
 import AdminPage from '../admin/AdminPage'
-import ViewLadeliste from '../view/ViewLadeliste'
+
 import PasswordPage from '../PasswordPage/PasswordPage'
 
 
@@ -27,9 +27,8 @@ export const router = new Router({
     { path: '/register', component: RegisterPage },
     { path: '/history', component: HistoryPage  },
     { path: '/verwaltung', component: AdminPage, meta: { authorize: [Role.Admin] }  },
-    { path: '/ladeliste', component: LadelisteAnlegen },
-    { path: '/frachtbrief/:id', component: ViewPage, props: true, },
-    { path: '/ladeliste/:id', component: ViewLadeliste, props: true, },
+    
+    
 
     // otherwise redirect to home
     { path: '*', redirect: '/' }

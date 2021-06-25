@@ -36,15 +36,17 @@
 
       <div class="container col-sm-6 offset-sm-3 bg-light pt-3"> <!-- Content würde sonst hinter Navbar liegen -->
       </div>
-      <div class="container col-sm-6 offset-sm-3 bg-light pt-5">
+      <div class="container pt-5">
               <div v-if="alert.message" :class="`alert ${alert.type}`"> <!-- Fehlermeldung werden unterhalb der Navbar dargestellt -->
-        {{alert.message}}
-      </div>
+               {{alert.message}}
+              </div>
 
-        <router-view></router-view> <!-- Inhalt der einzelnen Seiten -->
+         <router-view></router-view><!-- Inhalt der einzelnen Seiten -->
 
       </div>
+      
     </div>
+    
   </div>
 
 </template>

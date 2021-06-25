@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container col-sm-6 offset-sm-3 bg-light pt-5">
     <h3>Datentabellen bearbeiten</h3>
 
     <!-- ############################################################ WAGENDATEN ############################################################ -->
